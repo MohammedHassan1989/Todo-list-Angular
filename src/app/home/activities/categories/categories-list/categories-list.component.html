@@ -1,0 +1,48 @@
+<div class="col-12 " *ngIf="canSeeCategories">
+
+    <div class="card shadow mb-5 bg-white ">
+        <div class="card-body">
+<div class="text-danger" *ngIf="dto.errorMessage">
+{{dto.errorMessage}}
+</div>
+<!-- this.dto.items.length -->
+
+<div [@listOfDivsInOut]="this.dto.items.length" 
+  [@removeListItem] = "this.dto.items.length">
+            <div 
+             class="categories-container" *ngFor="let item of this.dto.items">
+ <div class="item-container  shadow mb-5" 
+            (mouseover)='toggleListItemButtonOver(item.categoryid)'
+            (mouseout)='toggleListItemButtonOut(item.categoryid)'
+            [@hoverItem]="item.isListItemHover ? 'moveUp' : ''">
+             
+                    <img width="12" height="12" class="page-header delete-img" src="assets/utility/images/icons/delete.png"
+                        (click)="DeleteItem(item.categoryid)" (mouseover)='toggleDeleteButtonOver(item.categoryid)'
+                        (mouseout)='toggleDeleteButtonOut(item.categoryid)' [@ScaleRotate]="item.isDeleteButtonHover ? 'ZoomIn' : ''">
+            
+                <div class="item-body">
+                    <a [routerLink]="" (click)="selectedCategory(item.categoryid)">
+                  {{item.categoryName}} ({{item.activitiesCount}})
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+            
+            <div class="item-container shadow mb-5 "
+            (mouseover)='toggleListItemButtonOver(0)'
+            (mouseout)='toggleListItemButtonOut(0)'
+            [@hoverItem]="isListItemHover ? 'moveUp' : ''" >
+             
+            
+                <div class="item-body add-new-item">
+                        <input #NewCategoryText class="form-control input-xs" value="" (keyup.enter)="AddNewCategory(NewCategoryText.value)" type="text">
+                  
+             
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

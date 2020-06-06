@@ -1,0 +1,85 @@
+
+    <div class="col-12">
+       
+        <div class="card border-success shadow mb-5 bg-white ">
+            <div class="card-header">New Activity  {{categoryID}}</div>
+            <div class="card-body text-center">
+                <!-- [ngClass]="{'was-validated':isSubmited==true} -->
+                <form [formGroup]="model"  (ngSubmit)="onSubmit()" 
+                [ngClass]="isSubmited? 'needs-validation  was-validated':' '" >
+                    <div class="row  ">
+                        <div class="input-group col-12">
+                            <div class="input-group-prepend">
+                                <i class="input-group-text title-icon fas fa-file-signature"></i>
+
+                            </div>
+                            <input type="text" class="form-control" id="validationTooltip01" placeholder="Title"
+                            formControlName="title"
+                            required>
+                            <div class="invalid-tooltip">
+                                Please provide a valid city.
+                              </div>
+                        </div>
+                        <div class=" col-12" style="margin-top: 20px;">
+
+                            <textarea class="form-control"
+                             placeholder="Description"
+                             formControlName="description" required></textarea>
+                             <div class="invalid-tooltip">
+                                Please provide a valid city.
+                              </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="margin-top: 10px;">
+
+                      
+                        <div  class="col-4 text-right">
+                            <input hidden #donecb type="checkbox" id="done-flag" formControlName="isDone">
+                            <label for="done-flag">
+                               <i  class="activity-done activity-done-done far fa-hand-peace"
+                               [ngClass]="{
+                                'activity-done-done': donecb.checked,
+                                'activity-done-Notdone': !donecb.checked
+                            }"
+                               ></i> 
+                            </label>
+                            
+                        </div>
+                        <div  class="col-4 text-right">
+                            <input hidden #activecb type="checkbox"  id="active-flag" formControlName="isActive">
+                            <label for="active-flag">
+                                <i class="activity-active   fas fa-power-off"
+                                [ngClass]="{
+                                    'activity-active-active': activecb.checked,
+                                    'activity-active-Notactive': !activecb.checked
+                                }"
+                                ></i>
+                            </label>
+                            
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-right">
+                           
+                            <!-- <img  width="100" height="100" src="assets/utility/images/icons/add-new.png"> -->
+                            <button class="submit-button" type="submit"
+                            (mouseover)='toggleButtonOver()'
+         (mouseout)='toggleButtonOut()'
+         [@ScaleRotate]="isHover ? 'ZoomIn' : ''">
+                                <i class="fixed-bottom-par fas fa-plus-circle"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+

@@ -1,0 +1,68 @@
+<div class="container">
+    <form   [formGroup]="model" (ngSubmit)="onSubmit()"
+     class="needs-validation" 
+     [ngClass]="{'was-validated': isPostback}"
+     novalidate>
+        <div class="row  justify-content-center align-items-center loginContainer">
+
+            <div class="card shadow  mb-5 bg-white  ">
+                <img st width="100%" height="150" class=" card-img-top login-image-header img-responsive"
+                    src="assets/utility/images/todo-login3.jpg">
+                <div class="card-body  text-center">
+                    <div class="text-danger" *ngIf="errorMessage">
+                        <ul>
+                            <li *ngFor="let err of errorMessage">{{err}}</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control"
+                        id = "email"  name="email"
+                        placeholder="Enter email"
+                        formControlName="username"
+                            required>
+                    </div>
+                    <!-- <div class="was-validatedinvalid-feedback">
+                        Please choose a email.
+                    </div> -->
+                    <div class="form-group">
+                        <input type="password" class="form-control"
+                        id = "Password"  name="Password"
+                         placeholder="Password" required
+                         formControlName="password"
+                         required>
+                    </div>
+                    <!-- <div class="was-validatedinvalid-feedback">
+                        Please choose a password.
+                    </div> -->
+                    <div class="form-row">
+
+
+                        <div class="form-group text-left col-md-6">
+                            <a [routerLink]="['/app/signup']" class="login-link">Sign up</a>
+                        </div>
+                        <div class="form-group  text-right col-md-6">
+                            <a href="#" class="login-link">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group text-center col-md-6">
+                            <a href="#" class="login-link">
+                                <img height="50" width="50" src="assets/utility/images/icons/google-icon.png">
+                            </a>
+                        </div>
+                        <div class="form-group  text-center col-md-6">
+                            <a href="#" class="login-link">
+                                <img height="50" width="50" src="assets/utility/images/icons/fb-icon.png">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

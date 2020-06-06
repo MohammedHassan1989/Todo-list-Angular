@@ -1,0 +1,127 @@
+<div class="col-12"  >
+    <div class="card border-success shadow mb-5 bg-white ">
+        <div class="card-header">New Goal</div>
+        <div class="card-body text-center">
+            <form [formGroup]="model" (ngSubmit)="onSubmit()"
+                [ngClass]="isSubmited? 'needs-validation  was-validated':' '">
+
+
+                <div class="row">
+                    <div class="input-group col-12">
+                        <div class="input-group-prepend">
+                            <i class="input-group-text title-icon fas fa-file-signature"></i>
+
+                        </div>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Title"
+                            formControlName="title" required>
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <a [routerLink]="" (click)='toggleShowHideProperty()'>
+                        Add new property
+                    </a>
+                </div>
+
+                <div class="row  property-area" [@ShowHide]="isShowProperty ? 'showItem' : 'hideItem'">
+                    <div class="col-4">
+                        <input type="text" #propertyTitle class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-3">
+                        <select class="form-control" #propertyType>
+                            <option>Type</option>
+                            <option value='string'>string</option>
+                            <option value='textArea'>textArea</option>
+                            <option value='Yes/No'>Yes/No</option>
+                            <option value='date'>date</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <input type="number" #propertyPosition class="form-control" placeholder="position">
+                    </div>
+                    <div class="col-3 text-right">
+                        <i (click)='addProperty(propertyTitle.value,propertyType.value,propertyPosition.value)'
+                            class="add-property-icon fas fa-pencil-alt"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="row " style="margin-top: 15px;">
+
+
+                </div>
+
+                <div class="row" style="margin-top: 10px;">
+                    <div class="col-4 text-right">
+                        <input hidden type="checkbox" id="done-flag" formControlName="isDone">
+                        <label for="done-flag">
+                            <i class="activity-done far fa-hand-peace"></i>
+                        </label>
+                    </div>
+                    <div class="col-4 text-right">
+                        <input hidden type="checkbox" id="active-flag" formControlName="isActive">
+                        <label for="active-flag">
+                            <i class="activity-active fas fa-power-off"></i>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Properties ----------------------->
+                <div style="margin-top: 15px;">
+                    <div style="margin-top: 10px;" formArrayName="properties"
+                        *ngFor="let item of getProperty.controls; let i = index;">
+                        <div [@AddRemoveListItem] class="row" [formGroupName]="i">
+
+                            <div class="col-2"></div>
+                            <div class="col-8 text-left">
+                                <label>
+                                    {{getProperty.get(i+'.title')?.value}}
+                                </label>
+                                <!-- text ----------------------->
+                                <div *ngIf="getProperty.get(i+'.propertyType')?.value =='string'">
+                                    <input formControlName="value" [placeholder]="getProperty.get(i+'.title')?.value"
+                                        class="form-control">
+                                </div>
+                                <!-- textArea ----------------------->
+                                <div *ngIf="getProperty.get(i+'.propertyType')?.value =='textArea'">
+                                    <textarea formControlName="value" class="form-control">
+
+                                 </textarea>
+                                </div>
+                                <!-- Yes/No ----------------------->
+                                <div *ngIf="getProperty.get(i+'.propertyType')?.value =='Yes/No'">
+                                <select formControlName="value" class="form-control">
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                                <!-- Date ----------------------->
+                                <div *ngIf="getProperty.get(i+'.propertyType')?.value =='date'">
+                                   <input type="date"  formControlName="value" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Properties ----------------------->
+                <div class="row">
+                    <div class="col-12 text-right">
+
+                        <!-- <img  width="100" height="100" src="assets/utility/images/icons/add-new.png"> -->
+                        <button class="submit-button" type="submit" (mouseover)='toggleButtonOver()'
+                            (mouseout)='toggleButtonOut()' [@ScaleRotate]="isHover ? 'ZoomIn' : ''">
+                            <i class="fixed-bottom-par fas fa-plus-circle"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>

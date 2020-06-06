@@ -1,0 +1,19 @@
+html,body{
+    background-color: rgb(222, 227, 228);
+    height: 100%;
+}
+
+
+.btn-primary{
+    background-color: rgb(79, 209, 137);
+    border-color: rgb(80, 199, 133);
+}
+.btn-primary:hover{
+    background-color: rgb(68, 175, 117);
+    border-color: rgb(61, 161, 106);
+}
+.submit-button{
+    background-color: white;
+    border: none;
+}
+

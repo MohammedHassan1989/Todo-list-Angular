@@ -1,0 +1,58 @@
+
+
+.fixed-bottom-par{
+
+margin-top: 10px;;
+font-size: 40px;
+color: rgb(47, 177, 103);
+
+ 
+}
+.fixed-bottom-par:hover{
+ 
+color: rgb(26, 124, 69);
+cursor: pointer;
+ 
+ 
+}
+.title-icon {
+    color:rgb(26, 124, 69) ;
+    background-color: rgb(249, 255, 252);;
+}
+.activity-done{
+    margin-top: 10px;;
+    font-size: 30px;
+  
+    margin-left: 15px;
+}
+.activity-done-Notdone{
+    color: rgb(97, 97, 97);
+}
+.activity-done-done{
+    color: rgb(23, 161, 104);
+}
+.activity-done:hover{
+ text-shadow: 2px 2px 4px #696969;
+    cursor: pointer;
+}
+
+.activity-active{
+    margin-top: 10px;;
+    font-size: 30px;
+   
+    margin-left: 15px;
+}
+.activity-active-active{
+
+    color: rgb(51, 196, 113);
+
+}
+.activity-active-Notactive{
+
+    color: rgb(185, 0, 0);
+
+}
+.activity-active:hover{
+ text-shadow: 2px 2px 4px #b9d4bb;
+    cursor: pointer;
+}

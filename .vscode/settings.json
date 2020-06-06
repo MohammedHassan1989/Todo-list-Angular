@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "**/.git": true,         // this is a default value
+        "**/.DS_Store": true,    // this is a default value
+        "tslint.json":true,
+        "tsconfig.spec.json":true,
+        "tsconfig.json":true,
+        "README.md":true,
+        "tsconfig.app.json":true,
+
+        "package-lock.json":true,
+        "karma.conf.js":true,
+        "browserslist":true,
+        "angular.json":false,
+
+        ".gitignore":true,
+        ".editorconfig":true,
+        "favicon.ico":true,
+        "**/e2e": true, 
+        
+   
+    }
+}

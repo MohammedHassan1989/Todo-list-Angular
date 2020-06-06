@@ -1,0 +1,63 @@
+
+
+.fixed-bottom-par{
+
+    margin-top: 10px;;
+    font-size: 40px;
+    color: rgb(47, 177, 103);
+    
+     
+    }
+    .fixed-bottom-par:hover{
+     
+    color: rgb(26, 124, 69);
+    cursor: pointer;
+     
+     
+    }
+    .title-icon {
+        color:rgb(26, 124, 69) ;
+        background-color: rgb(249, 255, 252);;
+    }
+    .activity-done{
+        margin-top: 10px;;
+        font-size: 30px;
+        color: rgb(97, 97, 97);
+        margin-left: 15px;
+    }
+    .activity-done:hover{
+     text-shadow: 2px 2px 4px #696969;
+        cursor: pointer;
+    }
+    
+    .activity-active{
+        margin-top: 10px;;
+        font-size: 30px;
+        color: rgb(51, 196, 113);
+        margin-left: 15px;
+    }
+    .activity-active:hover{
+     text-shadow: 2px 2px 4px #b9d4bb;
+        cursor: pointer;
+    }
+
+
+    .add-property-icon{
+        font-size: 25px;
+        color: rgb(0, 104, 189);
+        margin-left: 15px;
+    }
+
+    .add-property-icon:hover{
+        text-shadow: 2px 2px 4px #696969;
+        color: rgb(13, 82, 138);
+        cursor: pointer;
+    }
+    .property-area{
+        margin-top: 15px;
+        padding: 15px;
+        position:sticky;
+        z-index: 999;
+  top:0;
+        background-color: rgb(245, 245, 245);
+    }

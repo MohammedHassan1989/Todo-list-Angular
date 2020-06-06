@@ -1,0 +1,69 @@
+.side-menu{
+    height: 100%;
+    
+    background-color: rgb(235, 215, 176);
+   
+}
+.side-menu-header{
+    background-image: url("../../assets/utility/images/side-menu-header2.jpg");
+    height: 32vh;
+    background-size: cover;
+    color: black;
+}
+
+.user-image{
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(160, 157, 0);
+    margin-left: 35px;
+    margin-top: 20px;
+
+}
+.user-data{
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.user-data a{
+    color: rgb(83, 83, 83);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.user-data a:hover{
+    color: rgb(91, 167, 110);
+    text-decoration: none;
+}
+.open-user-menu-icon{
+    color: rgb(91, 167, 110);
+}
+.open-user-menu-icon:hover{
+    color: rgb(19, 185, 61);
+    cursor: pointer;
+  
+}
+.side-menu-body {
+    margin-left: 5px;
+    margin-top: 3px;
+   color: white;
+}
+.side-menu-item {
+    margin-top: 15px;
+}
+
+
+.side-menu-item a {
+    margin-left: 10px;
+    color: rgb(141, 141, 141);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.side-menu-item a:hover  {
+text-decoration: none;
+color: rgb(19, 185, 61);
+}
+
+.fas{
+    color: rgb(116, 116, 116);
+}
+.fas:hover {
+    color: rgb(19, 185, 61);
+}
+

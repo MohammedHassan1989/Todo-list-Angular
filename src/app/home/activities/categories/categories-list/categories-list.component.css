@@ -1,0 +1,50 @@
+.item-container{
+    display:inline-block;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #86bfd6;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.item-body{
+    margin-left: 10px;
+    margin-right: 20px;
+ 
+    padding: 2px;
+}
+.item-body a{
+  text-decoration: none;
+  color: #69a6be;
+}
+.item-body a:hover{
+    text-decoration: none;
+    color: #a1a1a1;
+  }
+.delete-img:hover{
+    cursor: pointer;
+
+}
+.page-header{
+    position: absolute;
+    color: rgb(255, 64, 64);
+    right: 0;
+    top: 0;
+}
+.add-new-item{
+    margin-top: 3px;
+    margin-bottom: 3px; 
+}
+.input-xs {
+    height: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 1.5; /* If Placeholder of the input is moved up, rem/modify this. */
+    border-radius: 3px;
+  }
+  .categories-container{
+      float: left;
+  }
